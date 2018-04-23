@@ -15,6 +15,13 @@
 
 	<dependencies>
 
+		<!-- Link backend project -->
+		<dependency>
+			<groupId>zhao.yu</groupId>
+			<artifactId>shoppingbackend</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/javax/javaee-api -->
 		<dependency>
 			<groupId>javax</groupId>
@@ -51,7 +58,7 @@
 				<version>3.1</version>
 				<configuration>
 					<source>1.8</source>
-					<target>1.8</target>	
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 		</plugins>
