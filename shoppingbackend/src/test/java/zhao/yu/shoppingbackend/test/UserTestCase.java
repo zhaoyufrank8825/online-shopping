@@ -74,16 +74,86 @@ public class UserTestCase {
 //		
 //	}
 	
+//	@Test
+//	public void testUpdateCart() {
+//		user = userDAO.getByEmail("zy@gmail.com");
+//		cart = user.getCart();
+//		
+//		cart.setCartLines(2);
+//		cart.setGrandTotal(5555);
+//		
+//		assertEquals("Failed to add shipping address!", true, userDAO.updateCart(cart));
+//	}
+	
+	
+//	@Test
+//	public void testAddAddress() {
+//		user = new User() ;
+//		user.setFirstName("yu");
+//		user.setLastName("zhao");
+//		user.setEmail("zy@gmail.com");
+//		user.setContactNumber("1234512345");
+//		user.setRole("USER");
+//		user.setEnabled(true);
+//		user.setPassword("12345");
+//		
+//		assertEquals("Failed to add user!", true, userDAO.addUser(user));
+//		
+//		address = new Address();
+//		address.setAddressLineOne("6720 windwillow dr");
+//		address.setAddressLineTwo("#14204");
+//		address.setCity("Fort Worth");
+//		address.setState("TX");
+//		address.setCountry("USA");
+//		address.setPostalCode("76137");
+//		address.setBilling(true);
+//		
+//		address.setUser(user);
+//		assertEquals("Failed to add billing address!", true, userDAO.addAddress(address));
+//		
+//		address = new Address();
+//		address.setAddressLineOne("6720 windwillow dr");
+//		address.setAddressLineTwo("#14204");
+//		address.setCity("Fort Worth");
+//		address.setState("TX");
+//		address.setCountry("USA");
+//		address.setPostalCode("76137");
+//		address.setShipping(true);
+//		
+//		address.setUser(user);
+//		assertEquals("Failed to add shipping address!", true, userDAO.addAddress(address));
+//	}
+	
+//	@Test
+//	public void testAddAddress() {
+//		
+//		user = userDAO.getByEmail("zy@gmail.com");
+//		
+//		address = new Address();
+//		address.setAddressLineOne("5800 windwillow dr");
+//		address.setAddressLineTwo("#14204");
+//		address.setCity("Fort Worth");
+//		address.setState("TEXAS");
+//		address.setCountry("USA");
+//		address.setPostalCode("76137");
+//		address.setShipping(true);
+//		
+//		address.setUser(user);
+//		
+//		assertEquals("Failed to add shipping address!", true, userDAO.addAddress(address));
+//		
+//	}
+
 	@Test
-	public void testUpdateCart() {
+	public void testGetAddress() {
 		user = userDAO.getByEmail("zy@gmail.com");
-		cart = user.getCart();
+		assertEquals("Failed to get shipping address!", 2, userDAO.listShippingAddress(user).size());
 		
-		cart.setCartLines(2);
-		cart.setGrandTotal(5555);
-		
-		assertEquals("Failed to add shipping address!", true, userDAO.updateCart(cart));
+		assertEquals("Failed to get billing address!", "Fort Worth", userDAO.getBillingAddress(user).getCity());
 	}
+	
+	
+	
 	
 }
 
