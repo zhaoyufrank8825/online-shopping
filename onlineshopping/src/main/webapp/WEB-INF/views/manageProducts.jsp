@@ -91,7 +91,8 @@
 									<div class="text-right">
 										<br />
 										<button type="button" class="btn btn-warning btn-xs"
-											data-toggle="modal" data-target="#myCategoryModal">Add New Category</button>
+											data-toggle="modal" data-target="#myCategoryModal">Add
+											New Category</button>
 									</div>
 								</c:if>
 							</div>
@@ -104,11 +105,11 @@
 
 							<div class="col-md-offset-4 col-md-4">
 								<sf:hidden path="id" />
-									<sf:hidden path="code" />
-									<sf:hidden path="supplierId" />
-									<sf:hidden path="active" />
+								<sf:hidden path="code" />
+								<sf:hidden path="supplierId" />
+								<sf:hidden path="active" />
 								<input type="submit" name="submit" value="Save"
-									class="btn btn-primary" />	
+									class="btn btn-primary" />
 							</div>
 						</div>
 
@@ -127,7 +128,7 @@
 		role="dialog" aria-labelledby="myModalLabel">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-			
+
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
@@ -135,7 +136,7 @@
 					</button>
 					<h4 class="modal-title" id="myModalLabel">New Category</h4>
 				</div>
-				
+
 				<div class="modal-body">
 					<sf:form id="categoryForm" class="form-horizontal"
 						modelAttribute="category" action="${contextRoot}/manage/category"
@@ -178,42 +179,43 @@
 		</div>
 
 		<div class='col-xs-12'>
-			<div style="overflow: auto">
-				<table id="adminProductsTable"
-					class="table table-condensed table-bordered">
+			<div class="container-fluid">
+				<div class="table-responsive">
+				
+					<table id="adminProductsTable" class="table table-condensed table-bordered">
 
-					<thead>
-						<tr>
-							<th>Id</th>
-							<th>&#160;</th>
-							<th>Name</th>
-							<th>Brand</th>
-							<th>Qty. Avail</th>
-							<th>Unit Price</th>
-							<th>Activate</th>
-							<th>Edit</th>
-						</tr>
-					</thead>
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>&#160;</th>
+								<th>Name</th>
+								<th>Brand</th>
+								<th>Qty. Avail</th>
+								<th>Unit Price</th>
+								<th>Activate</th>
+								<th>Edit</th>
+							</tr>
+						</thead>
+
+						<tfoot>
+							<tr>
+								<th>Id</th>
+								<th>&#160;</th>
+								<th>Name</th>
+								<th>Brand</th>
+								<th>Qty. Avail</th>
+								<th>Unit Price</th>
+								<th>Activate</th>
+								<th>Edit</th>
+							</tr>
+						</tfoot>
+					</table>
 					
-					<tfoot>
-						<tr>
-							<th>Id</th>
-							<th>&#160;</th>
-							<th>Name</th>
-							<th>Brand</th>
-							<th>Qty. Avail</th>
-							<th>Unit Price</th>
-							<th>Activate</th>
-							<th>Edit</th>
-						</tr>
-					</tfoot>
-				</table>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div>
-	
-	</div>
+	<div></div>
 </div>
 
 

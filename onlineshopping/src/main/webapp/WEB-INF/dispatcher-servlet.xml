@@ -13,7 +13,6 @@
    http://www.springframework.org/schema/webflow-config/spring-webflow-config.xsd
    ">
 	<context:component-scan base-package="zhao.yu.onlineshopping" />
-	<context:component-scan base-package="zhao.yu.shoppingbackend" />
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
